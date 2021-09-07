@@ -2,7 +2,7 @@ const express= require('express');
 
 const app= express();
 
-const Users={}
+const Users=[]
 
 app.listen(3000)
 
