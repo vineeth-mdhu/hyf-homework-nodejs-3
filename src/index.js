@@ -28,6 +28,7 @@ app.get('/user/:id',(req,res)=>{
 
 app.delete('/user/:id',(req,res)=>{
     if(Users.length>=req.params.id){
+        res.statusCode=202;
         res.send(Users.splice(req.params.id,1)[0]);
         res.end();
     }
