@@ -11,5 +11,6 @@ app.get('/',(req,res)=>{
 });
 
 app.get('/users',(req,res)=>{
-    res.end(Users);
+    res.send(Users);
+    res.end();
 });
