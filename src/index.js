@@ -14,3 +14,14 @@ app.get('/users',(req,res)=>{
     res.send(Users);
     res.end();
 });
+
+app.post('/user',(req,res)=>{
+    Users.push({id:Users.length});
+    res.send(Users[Users.length]);
+    res.end();
+});
+
+app.get('/user/:id',(req,res)=>{
+    res.send(Users[req.params.id]);
+    res.end();
+});
