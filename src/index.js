@@ -15,13 +15,13 @@ app.get('/users',(req,res)=>{
     res.end();
 });
 
-app.post('/users',(req,res)=>{
+app.post('/user',(req,res)=>{
     Users.push({id:Users.length});
-    res.send(Users[-1]);
+    res.send(Users[Users.length]);
     res.end();
 });
 
-app.get('/users/:id',(req,res)=>{
+app.get('/user/:id',(req,res)=>{
     res.send(Users[req.params.id]);
     res.end();
 });
