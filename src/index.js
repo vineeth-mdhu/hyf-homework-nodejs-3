@@ -16,7 +16,8 @@ app.get('/users',(req,res)=>{
 });
 
 app.post('/users',(req,res)=>{
-    Users.push({id:Users.length()-1});
+    Users.push({id:Users.length});
+    res.send(Users[-1]);
     res.end();
 });
 
